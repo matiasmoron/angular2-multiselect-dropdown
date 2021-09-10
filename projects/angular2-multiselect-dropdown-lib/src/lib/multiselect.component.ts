@@ -301,7 +301,7 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
 
     writeValue(value: any) {
         if (value !== undefined && value !== null && value !== '') {
-            if (this.settings.singleSelection) {
+            if (this.settings?.singleSelection) {
                 if (this.settings.groupBy) {
                     this.groupedData = this.transformData(this.data, this.settings.groupBy);
                     this.groupCachedItems = this.cloneArray(this.groupedData);
